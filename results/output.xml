@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-18T18:14:15.351093" rpa="false" schemaversion="5">
+<suite id="s1" name="Features" source="C:\Users\Shadi\Desktop\digipay_payment\features">
+<suite id="s1-s1" name="Payment Methods" source="C:\Users\Shadi\Desktop\digipay_payment\features\payment_methods.robot">
+<test id="s1-s1-t1" name="S1 Happy Path" line="12">
+<kw name="the API scenario is" owner="steps.payment_steps.PaymentSteps">
+<arg>happy_path</arg>
+<status status="PASS" start="2026-02-18T18:14:15.520570" elapsed="0.000158"/>
+</kw>
+<kw name="I fetch payment methods for cell number" owner="steps.payment_steps.PaymentSteps">
+<arg>09100000000</arg>
+<status status="PASS" start="2026-02-18T18:14:15.520983" elapsed="0.006888"/>
+</kw>
+<kw name="response status should be" owner="steps.payment_steps.PaymentSteps">
+<msg time="2026-02-18T18:14:15.528520" level="FAIL">Expected status 200, got None</msg>
+<arg>200</arg>
+<status status="FAIL" start="2026-02-18T18:14:15.528202" elapsed="0.002174">Expected status 200, got None</status>
+</kw>
+<kw name="all required fields must exist" owner="steps.payment_steps.PaymentSteps">
+<status status="NOT RUN" start="2026-02-18T18:14:15.530800" elapsed="0.000038"/>
+</kw>
+<kw name="clickability and wallet rules must pass" owner="steps.payment_steps.PaymentSteps">
+<status status="NOT RUN" start="2026-02-18T18:14:15.531101" elapsed="0.000027"/>
+</kw>
+<kw name="BNPL options must satisfy all rules" owner="steps.payment_steps.PaymentSteps">
+<status status="NOT RUN" start="2026-02-18T18:14:15.531309" elapsed="0.000022"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:14:15.519674" elapsed="0.011916">Expected status 200, got None</status>
+</test>
+<test id="s1-s1-t2" name="S2 BNPL Blocked" line="20">
+<kw name="the API scenario is" owner="steps.payment_steps.PaymentSteps">
+<arg>bnpl_blocked</arg>
+<status status="PASS" start="2026-02-18T18:14:15.532755" elapsed="0.000157"/>
+</kw>
+<kw name="I fetch payment methods for cell number" owner="steps.payment_steps.PaymentSteps">
+<arg>09000000000</arg>
+<status status="PASS" start="2026-02-18T18:14:15.533136" elapsed="0.006130"/>
+</kw>
+<kw name="BNPL options must satisfy all rules" owner="steps.payment_steps.PaymentSteps">
+<status status="PASS" start="2026-02-18T18:14:15.539510" elapsed="0.000105"/>
+</kw>
+<status status="PASS" start="2026-02-18T18:14:15.532263" elapsed="0.007528"/>
+</test>
+<test id="s1-s1-t3" name="S3 Insufficient Credit" line="25">
+<kw name="the API scenario is" owner="steps.payment_steps.PaymentSteps">
+<arg>insufficient_credit</arg>
+<status status="PASS" start="2026-02-18T18:14:15.540759" elapsed="0.000165"/>
+</kw>
+<kw name="I fetch payment methods for cell number" owner="steps.payment_steps.PaymentSteps">
+<arg>09000000001</arg>
+<status status="PASS" start="2026-02-18T18:14:15.541115" elapsed="0.003254"/>
+</kw>
+<kw name="BNPL options must satisfy all rules" owner="steps.payment_steps.PaymentSteps">
+<status status="PASS" start="2026-02-18T18:14:15.544696" elapsed="0.000127"/>
+</kw>
+<status status="PASS" start="2026-02-18T18:14:15.540306" elapsed="0.004796"/>
+</test>
+<test id="s1-s1-t4" name="S4 Non Active Option" line="30">
+<kw name="the API scenario is" owner="steps.payment_steps.PaymentSteps">
+<arg>non_active_option</arg>
+<status status="PASS" start="2026-02-18T18:14:15.546090" elapsed="0.000180"/>
+</kw>
+<kw name="I fetch payment methods for cell number" owner="steps.payment_steps.PaymentSteps">
+<arg>09000000002</arg>
+<status status="PASS" start="2026-02-18T18:14:15.546600" elapsed="0.006173"/>
+</kw>
+<kw name="BNPL options must satisfy all rules" owner="steps.payment_steps.PaymentSteps">
+<status status="PASS" start="2026-02-18T18:14:15.553008" elapsed="0.000099"/>
+</kw>
+<status status="PASS" start="2026-02-18T18:14:15.545648" elapsed="0.007626"/>
+</test>
+<test id="s1-s1-t5" name="S5 Default Option Invalid" line="35">
+<kw name="the API scenario is" owner="steps.payment_steps.PaymentSteps">
+<arg>default_option_invalid</arg>
+<status status="PASS" start="2026-02-18T18:14:15.554234" elapsed="0.000169"/>
+</kw>
+<kw name="I fetch payment methods for cell number" owner="steps.payment_steps.PaymentSteps">
+<arg>09000000003</arg>
+<status status="PASS" start="2026-02-18T18:14:15.554647" elapsed="0.004897"/>
+</kw>
+<kw name="BNPL options must satisfy all rules" owner="steps.payment_steps.PaymentSteps">
+<status status="PASS" start="2026-02-18T18:14:15.559868" elapsed="0.000139"/>
+</kw>
+<status status="PASS" start="2026-02-18T18:14:15.553730" elapsed="0.006553"/>
+</test>
+<test id="s1-s1-t6" name="S6 Missing Required Field" line="40">
+<kw name="the API scenario is" owner="steps.payment_steps.PaymentSteps">
+<arg>missing_required_field</arg>
+<status status="PASS" start="2026-02-18T18:14:15.561233" elapsed="0.000107"/>
+</kw>
+<kw name="I fetch payment methods for cell number" owner="steps.payment_steps.PaymentSteps">
+<arg>09000000004</arg>
+<status status="PASS" start="2026-02-18T18:14:15.561488" elapsed="0.005555"/>
+</kw>
+<kw name="all required fields must exist" owner="steps.payment_steps.PaymentSteps">
+<status status="PASS" start="2026-02-18T18:14:15.567389" elapsed="0.000136"/>
+</kw>
+<status status="PASS" start="2026-02-18T18:14:15.560931" elapsed="0.006888"/>
+</test>
+<test id="s1-s1-t7" name="S7 Wrong Type" line="45">
+<kw name="the API scenario is" owner="steps.payment_steps.PaymentSteps">
+<arg>wrong_type</arg>
+<status status="PASS" start="2026-02-18T18:14:15.569150" elapsed="0.000163"/>
+</kw>
+<kw name="I fetch payment methods for cell number" owner="steps.payment_steps.PaymentSteps">
+<arg>09000000005</arg>
+<status status="PASS" start="2026-02-18T18:14:15.569557" elapsed="0.004658"/>
+</kw>
+<kw name="all required fields must exist" owner="steps.payment_steps.PaymentSteps">
+<status status="PASS" start="2026-02-18T18:14:15.574482" elapsed="0.000099"/>
+</kw>
+<status status="PASS" start="2026-02-18T18:14:15.568666" elapsed="0.006223"/>
+</test>
+<test id="s1-s1-t8" name="S8 Non Success" line="50">
+<kw name="the API scenario is" owner="steps.payment_steps.PaymentSteps">
+<arg>non_success</arg>
+<status status="PASS" start="2026-02-18T18:14:15.575907" elapsed="0.000107"/>
+</kw>
+<kw name="I fetch payment methods for cell number" owner="steps.payment_steps.PaymentSteps">
+<arg>09000000006</arg>
+<status status="PASS" start="2026-02-18T18:14:15.576159" elapsed="0.005305"/>
+</kw>
+<kw name="response status should be" owner="steps.payment_steps.PaymentSteps">
+<msg time="2026-02-18T18:14:15.582598" level="FAIL">Expected status 500, got None</msg>
+<arg>500</arg>
+<status status="FAIL" start="2026-02-18T18:14:15.581847" elapsed="0.001607">Expected status 500, got None</status>
+</kw>
+<status status="FAIL" start="2026-02-18T18:14:15.575537" elapsed="0.008269">Expected status 500, got None</status>
+</test>
+<status status="FAIL" start="2026-02-18T18:14:15.388263" elapsed="0.196404"/>
+</suite>
+<status status="FAIL" start="2026-02-18T18:14:15.352375" elapsed="0.233229"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Features" id="s1" pass="6" fail="2" skip="0">Features</stat>
+<stat name="Payment Methods" id="s1-s1" pass="6" fail="2" skip="0">Features.Payment Methods</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

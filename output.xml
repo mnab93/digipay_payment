@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-18T18:01:36.102840" rpa="false" schemaversion="5">
+<suite id="s1" name="Features" source="C:\Users\Shadi\Desktop\digipay_payment\features">
+<suite id="s1-s1" name="Payment Methods" source="C:\Users\Shadi\Desktop\digipay_payment\features\payment_methods.robot">
+<test id="s1-s1-t1" name="S1 Happy Path" line="12">
+<kw name="the API scenario is">
+<msg time="2026-02-18T18:01:36.275451" level="FAIL">No keyword with name 'the API scenario is' found.</msg>
+<arg>happy_path</arg>
+<status status="FAIL" start="2026-02-18T18:01:36.275360" elapsed="0.000161">No keyword with name 'the API scenario is' found.</status>
+</kw>
+<kw name="I fetch payment methods for cell number">
+<arg>09100000000</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.275814" elapsed="0.000027"/>
+</kw>
+<kw name="response status should be">
+<arg>200</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.276185" elapsed="0.000020"/>
+</kw>
+<kw name="all required fields must exist">
+<status status="NOT RUN" start="2026-02-18T18:01:36.276523" elapsed="0.000021"/>
+</kw>
+<kw name="clickability and wallet rules must pass">
+<status status="NOT RUN" start="2026-02-18T18:01:36.276895" elapsed="0.000021"/>
+</kw>
+<kw name="BNPL options must satisfy all rules">
+<status status="NOT RUN" start="2026-02-18T18:01:36.277283" elapsed="0.000021"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:01:36.273334" elapsed="0.004359">No keyword with name 'the API scenario is' found.</status>
+</test>
+<test id="s1-s1-t2" name="S2 BNPL Blocked" line="20">
+<kw name="the API scenario is">
+<msg time="2026-02-18T18:01:36.280208" level="FAIL">No keyword with name 'the API scenario is' found.</msg>
+<arg>bnpl_blocked</arg>
+<status status="FAIL" start="2026-02-18T18:01:36.280178" elapsed="0.000067">No keyword with name 'the API scenario is' found.</status>
+</kw>
+<kw name="I fetch payment methods for cell number">
+<arg>09000000000</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.280600" elapsed="0.000021"/>
+</kw>
+<kw name="BNPL options must satisfy all rules">
+<status status="NOT RUN" start="2026-02-18T18:01:36.280917" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:01:36.278673" elapsed="0.002548">No keyword with name 'the API scenario is' found.</status>
+</test>
+<test id="s1-s1-t3" name="S3 Insufficient Credit" line="25">
+<kw name="the API scenario is">
+<msg time="2026-02-18T18:01:36.283932" level="FAIL">No keyword with name 'the API scenario is' found.</msg>
+<arg>insufficient_credit</arg>
+<status status="FAIL" start="2026-02-18T18:01:36.283897" elapsed="0.000078">No keyword with name 'the API scenario is' found.</status>
+</kw>
+<kw name="I fetch payment methods for cell number">
+<arg>09000000001</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.284358" elapsed="0.000032"/>
+</kw>
+<kw name="BNPL options must satisfy all rules">
+<status status="NOT RUN" start="2026-02-18T18:01:36.284684" elapsed="0.000023"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:01:36.282288" elapsed="0.002645">No keyword with name 'the API scenario is' found.</status>
+</test>
+<test id="s1-s1-t4" name="S4 Non Active Option" line="30">
+<kw name="the API scenario is">
+<msg time="2026-02-18T18:01:36.287975" level="FAIL">No keyword with name 'the API scenario is' found.</msg>
+<arg>non_active_option</arg>
+<status status="FAIL" start="2026-02-18T18:01:36.287910" elapsed="0.000121">No keyword with name 'the API scenario is' found.</status>
+</kw>
+<kw name="I fetch payment methods for cell number">
+<arg>09000000002</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.288449" elapsed="0.000029"/>
+</kw>
+<kw name="BNPL options must satisfy all rules">
+<status status="NOT RUN" start="2026-02-18T18:01:36.288781" elapsed="0.000021"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:01:36.285756" elapsed="0.003380">No keyword with name 'the API scenario is' found.</status>
+</test>
+<test id="s1-s1-t5" name="S5 Default Option Invalid" line="35">
+<kw name="the API scenario is">
+<msg time="2026-02-18T18:01:36.291659" level="FAIL">No keyword with name 'the API scenario is' found.</msg>
+<arg>default_option_invalid</arg>
+<status status="FAIL" start="2026-02-18T18:01:36.291624" elapsed="0.000073">No keyword with name 'the API scenario is' found.</status>
+</kw>
+<kw name="I fetch payment methods for cell number">
+<arg>09000000003</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.292086" elapsed="0.000021"/>
+</kw>
+<kw name="BNPL options must satisfy all rules">
+<status status="NOT RUN" start="2026-02-18T18:01:36.292427" elapsed="0.000021"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:01:36.290058" elapsed="0.002683">No keyword with name 'the API scenario is' found.</status>
+</test>
+<test id="s1-s1-t6" name="S6 Missing Required Field" line="40">
+<kw name="the API scenario is">
+<msg time="2026-02-18T18:01:36.295492" level="FAIL">No keyword with name 'the API scenario is' found.</msg>
+<arg>missing_required_field</arg>
+<status status="FAIL" start="2026-02-18T18:01:36.295453" elapsed="0.000079">No keyword with name 'the API scenario is' found.</status>
+</kw>
+<kw name="I fetch payment methods for cell number">
+<arg>09000000004</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.295844" elapsed="0.000021"/>
+</kw>
+<kw name="all required fields must exist">
+<status status="NOT RUN" start="2026-02-18T18:01:36.296168" elapsed="0.000021"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:01:36.293757" elapsed="0.002716">No keyword with name 'the API scenario is' found.</status>
+</test>
+<test id="s1-s1-t7" name="S7 Wrong Type" line="45">
+<kw name="the API scenario is">
+<msg time="2026-02-18T18:01:36.299847" level="FAIL">No keyword with name 'the API scenario is' found.</msg>
+<arg>wrong_type</arg>
+<status status="FAIL" start="2026-02-18T18:01:36.299777" elapsed="0.000130">No keyword with name 'the API scenario is' found.</status>
+</kw>
+<kw name="I fetch payment methods for cell number">
+<arg>09000000005</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.300443" elapsed="0.000025"/>
+</kw>
+<kw name="all required fields must exist">
+<status status="NOT RUN" start="2026-02-18T18:01:36.300853" elapsed="0.000021"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:01:36.297423" elapsed="0.003864">No keyword with name 'the API scenario is' found.</status>
+</test>
+<test id="s1-s1-t8" name="S8 Non Success" line="50">
+<kw name="the API scenario is">
+<msg time="2026-02-18T18:01:36.304098" level="FAIL">No keyword with name 'the API scenario is' found.</msg>
+<arg>non_success</arg>
+<status status="FAIL" start="2026-02-18T18:01:36.304062" elapsed="0.000074">No keyword with name 'the API scenario is' found.</status>
+</kw>
+<kw name="I fetch payment methods for cell number">
+<arg>09000000006</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.304432" elapsed="0.000021"/>
+</kw>
+<kw name="response status should be">
+<arg>500</arg>
+<status status="NOT RUN" start="2026-02-18T18:01:36.304753" elapsed="0.000021"/>
+</kw>
+<status status="FAIL" start="2026-02-18T18:01:36.302487" elapsed="0.002591">No keyword with name 'the API scenario is' found.</status>
+</test>
+<status status="FAIL" start="2026-02-18T18:01:36.139778" elapsed="0.166670"/>
+</suite>
+<status status="FAIL" start="2026-02-18T18:01:36.104523" elapsed="0.203236"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Features" id="s1" pass="0" fail="8" skip="0">Features</stat>
+<stat name="Payment Methods" id="s1-s1" pass="0" fail="8" skip="0">Features.Payment Methods</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
